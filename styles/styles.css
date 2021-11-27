@@ -22,6 +22,15 @@ body {
     background-image: url("img/tienda01.jpeg");
 }
 
+h2{
+    margin: 5% auto 5vh auto;
+    font-size: 1.8vw;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1vh;
+    color: var(--color-white);
+    background-color: var(--color-principal);
+}
 h3{
     margin: 0px auto;
     font-size: 1.8vw;
@@ -78,7 +87,7 @@ a:hover {
     color: var(--color-gray);
 }
 
-/* ********************* SECTION ****************** */
+/* ********************* SECTION 1 ****************** */
 
 section{
     width: 100%;
@@ -135,27 +144,123 @@ section{
     box-shadow: 5px 10px 10px var(--color-gray);
 }
 
+/* ********************* SECTION SERVICIOS ****************** */
+
+.servicios{
+    width: 60%;
+    margin: 0px auto 30%;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+
+}
+
+.a {
+    grid-column: 1 / span 2;
+}
+.b {
+    grid-column: 3 ;
+    grid-row: 1 / span 2;
+}
+.c {
+    grid-column: 1 ;
+    grid-row: 2 ;
+}
+.d {
+    grid-column: 2 ;
+    grid-row: 2 ;
+}
+
+.listas{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 5vh;;
+}
+dt{
+    font-size: 1.6vw;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-align: left;
+}
+dd{
+    font-size: 1.6vw;
+    font-weight: 300;
+    color: var(--color-gray);
+    text-align: left;
+    text-indent: 1.2vw;
+}
 
 
+/* ********************* SECTION CONTACTO ****************** */
 
+.contacto{
+    width: 60%;
+    margin: 0px auto 30%;
+}
+.contenedorContacto{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+    row-gap: 7vh;
+    text-align: center;
+    color: var(--color-principal);
+}
+.contenedorContacto img{
+    width: 5vh;
+}
+.contenedorContacto p{
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: var(--color-gray);
+    text-align: center;
+}
+.contenedorContacto p span{
+    font-weight: 500;
+}
+.redesContacto a{
+    text-decoration: none;
+}
 
-
-
-
+.map{
+    width: 70%;
+    margin: 7vh auto 0vh auto;
+    text-align: center;
+}
+.map iframe{
+    width: 100%;
+    margin-bottom: 3vh;
+    box-shadow: 5px 5px 20px var(--color-gray);
+}
 
 
 /* ********************* FOOTER ****************** */
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    width:100%;
+    width: 100%;
     background-color: var(--color-principal);
 }
 
-footer div{
-    font-size: 1vw;
+.pie{
+    width:100%;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.pie div{
+    font-size: 1.2vw;
     font-weight: 300;
     color: var(--color-white);
     padding: 2%;
@@ -163,26 +268,30 @@ footer div{
 
 .redes{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items:end;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
     align-items: center;
 }
 
 .redes a{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: end;
     align-items: center;
     text-decoration: none;
     color: var(--color-white);
 }
 
 .redes img{
-    width: 1.6vw;
+    width: 1.1vw;
     display: grid;
     justify-items: center;
     align-items: center;
-    margin-right: 0.5vw;
+    margin-right: 0.1vw;
+    margin-left: 0.1vw;
 }
 
-.redes a:hover {
+.redes a:hover, .redesContacto a:hover {
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.6;
 }
