@@ -322,9 +322,9 @@ footer {
 
 
 @media screen and (max-width: 640px) {
-    body {
-      /* background: blue; */
-    }
+    /*body {
+       background: blue;
+    } */
     h2{
         margin: 5% auto 2% auto;
         font-size: 4vw;
@@ -497,9 +497,9 @@ footer {
 
 
   @media screen and (min-width: 640px) and (max-width: 1280px) {
-    body {
-      background: /* red */;
-    }
+     /*body {
+      background: red ;
+    }*/
     nav ul li a {
         font-size: 1.5vw;
         font-weight: 400;
@@ -538,3 +538,4 @@ footer {
         overflow: hidden;
     }
   }
+}
