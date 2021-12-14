@@ -18,8 +18,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-gray);
-    background-image: url("img/tienda01.jpeg");
+    background-color: var(--color-white);
 }
 
 h2{
@@ -34,39 +33,28 @@ h2{
 h3{
     margin: 0px auto;
     font-size: 1.8vw;
-    font-weight: 300;
-    text-align: left;
+    font-weight: 400;
+    text-align: center;
     letter-spacing: 0.1vh;
-    line-height:6vh;
+    line-height:5vh;
     color: var(--color-white);
 }
 
 .cabecera{
     width: 100%;
-    height: 200px;;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items:center;
-    overflow: hidden;
-
-
+    align-items: center;
     background-color: var(--color-white);
 }
-.adorno1{
-    width: 90%;
-/*     opacity: 0.5; */
-}
-
 .logo{
-    width:50%;
-    height: 50%;
-    background-color: var(--color-white);
-    padding: 10px;
-    object-fit: cover;
+    width: 60%;
 }
-.adorno2{
-    width: 90%;
-   /*  opacity: 0.5; */
+.adorno{
+    width: 100%;
+    opacity: 0.5;
+    overflow: hidden;
 }
 
 /* ********************* NAV ****************** */
@@ -111,6 +99,7 @@ section{
 .titular-texto{
     width: 70%;
     padding: 2.5vh 0px;
+    font-weight: 200;
     margin: 0px auto;
 }
 
@@ -138,9 +127,6 @@ section{
     text-align: left;
     text-indent: 2vw;
 }
-.textoyfoto img{
-    width:100%;
-}
 .imagenesmini{
     width: 100%;
     margin: 2% auto;
@@ -148,11 +134,19 @@ section{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
+    column-gap: 5%;
 }
 .imagenesmini  img{
     width: 25%;
     border-radius: 15px;
-    box-shadow: 5px 10px 10px var(--color-gray);
+    box-shadow: 5px 5px 10px rgb(90, 90, 90, 0.5);
+    object-fit: cover;
+}
+.imagenesmini  img:hover{
+    filter: brightness(80%);
+}    
+.cuerpo img{
+    width:100%;
 }
 
 /* ********************* SECTION SERVICIOS ****************** */
@@ -179,9 +173,11 @@ section{
 
 .a {
     grid-column: 1 / span 2;
+    height: 50vh;
+    object-fit: cover;
 }
 .a img{
-    width: 30%;
+    width: 100%;
     border-radius: 5px;
 }
 .b {
@@ -321,3 +317,224 @@ footer {
     text-decoration: none;
     opacity: 0.6;
 }
+
+
+
+
+@media screen and (max-width: 640px) {
+    body {
+      /* background: blue; */
+    }
+    h2{
+        margin: 5% auto 2% auto;
+        font-size: 4vw;
+    }
+    h3{
+        font-size: 3.5vw;
+        line-height:3vh;
+    }
+    .cabecera{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items:center;
+        align-items: center;
+        background-color: var(--color-white);
+    }
+    .logo{
+        width: 20%;
+    }
+    .adorno{
+        display: none;
+    }
+
+    /* ********************* NAV ****************** */
+    .menu{
+        width: 60%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0.5%;
+        
+    }
+    .menu{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 3%;
+    }
+    nav ul li a {
+        font-size: 3vw;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        color: var(--color-white);
+    }
+    
+    /* ********************* SECTION 1 ****************** */
+    .titular-texto{
+        width: 100%;
+    }
+    .titular-texto h3{
+        width: 90%;
+        font-weight: 200;
+    }
+        /* ----------- texto y foto ----------- */
+
+    .textoyfoto{
+        grid-template-columns: 1fr;
+    }
+    .texto1{
+        margin-top: 2vh;
+        width: 90%;
+        height: 50vh;
+        align-content: space-evenly;
+        align-items: start;
+        font-size: 3.5vw;
+        font-weight: 400;
+    }
+    .imagenesmini{
+        margin: 5% auto;
+    }
+    .imagenesmini  img{
+        border-radius: 5px;
+    }  
+    .cuerpo img{
+        width:100%;
+    }
+
+    /* ********************* SECTION SERVICIOS ****************** */
+
+    /* ********************* SECTION SERVICIOS ****************** */
+
+    .servicios{
+        width: 100%;
+    }
+    .pruebaBanner{
+        width: 95%;
+        margin: 0px auto;
+    }
+    .wrapper {
+        width: 95%;
+        margin: 0px auto;
+        display: block;
+    }
+    .box {
+        margin: 0px auto 4px auto;
+        border: 0px solid gray;
+    }
+    
+    .a {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .a img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .b {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .b img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .c {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .c img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .d {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .d img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .listas{
+        width: 70%;
+        display:block;
+        margin: 2% auto;
+    }
+    dt{
+        font-size: 4vw;
+    }
+    dd{
+        font-size: 3.5vw;
+    }
+
+    /* ********************* SECTION CONTACTO ****************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width: 640px) and (max-width: 1280px) {
+    body {
+      background: /* red */;
+    }
+    nav ul li a {
+        font-size: 1.5vw;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
+        color: var(--color-white);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        flex-wrap: nowrap;
+        font-family: 'Roboto', sans-serif;
+        /* background-color: green;
+        background-color: var(--color-white); */
+    }
+    .cabecera{
+        width: 80%;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        justify-items:center;
+        align-items: center;
+    }
+    .logo{
+        width: 60%;
+    }
+    .a2{
+        width: 100%;
+        opacity: 0.5;
+        overflow: hidden;
+    }
+  }
