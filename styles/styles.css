@@ -12,6 +12,10 @@
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     height: 100%;
     display: flex;
@@ -20,7 +24,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--color-white);
 }
-
 h2{
     margin: 5% auto 5vh auto;
     font-size: 1.8vw;
@@ -40,7 +43,7 @@ h3{
     color: var(--color-white);
 }
 
-.cabecera{
+header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -268,55 +271,7 @@ dd{
 }
 
 
-/* ********************* FOOTER ****************** */
-footer {
-    width: 100%;
-    background-color: var(--color-principal);
-}
 
-.pie{
-    width:100%;
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-.pie div{
-    font-size: 1.2vw;
-    font-weight: 300;
-    color: var(--color-white);
-    padding: 2%;
-}
-
-.redes{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items:center;
-    align-items: center;
-}
-
-.redes a{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-items: end;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-white);
-}
-
-.redes img{
-    width: 1.1vw;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    margin-right: 0.1vw;
-    margin-left: 0.1vw;
-}
-
-.redes a:hover, .redesContacto a:hover {
-    text-decoration: none;
-    opacity: 0.6;
-}
 
 
 
@@ -476,6 +431,13 @@ footer {
         font-size: 3.5vw;
     }
 
+    .contacto{
+        width: 100%;
+    }  
+    .map{
+        width: 100%;
+    }
+}
     /* ********************* SECTION CONTACTO ****************** */
 
 
@@ -496,7 +458,7 @@ footer {
 
 
 
-  @media screen and (min-width: 640px) and (max-width: 1280px) {
+@media screen and (min-width: 640px) and (max-width: 1280px) {
      /*body {
       background: red ;
     }*/
@@ -507,9 +469,9 @@ footer {
         text-align: center;
         color: var(--color-white);
     }
-  }
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
     body {
         height: 100%;
         display: flex;
@@ -537,5 +499,68 @@ footer {
         opacity: 0.5;
         overflow: hidden;
     }
-  }
+}
+
+
+/* ********************* FOOTER ****************** */
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-principal);
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "copyright cookies redes";
+    justify-items: center;
+    align-items: center;
+}
+
+.copyright{
+    grid-area: copyright;
+}
+
+.cookies{
+    grid-area: cookies;
+}
+.redes{
+    grid-area: redes;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
+    align-items: center;
+}
+
+.redes a{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: end;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-white);
+}
+.redes img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.footerFb{
+    margin-right: 0.3rem;
+}
+.footerInst{
+    margin-right: 0.4rem;
+}
+
+.redes a:hover, .redesContacto a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+    footer{
+        grid-template-areas: "redes"
+                            "copyright"
+                            "cookies";
+    }
 }
