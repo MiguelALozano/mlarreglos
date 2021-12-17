@@ -229,25 +229,54 @@ dd{
 }
 
 
-/* ********************* SECTION CONTACTO ****************** */
+.botonSubir {
+    color: var(--color-principal);
+    background: transparent;
+    border: 2px solid var(--color-principal);
+    border-radius: 6px;
+    border: none;
+          color: white;
+          padding: 0.2rem 1rem;
+          text-align: center;
+          display: inline-block;
+          font-size: 1rem;
+          margin: 4px 2px;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          text-decoration: none;
+          text-transform: uppercase;
+}
+.botonSubir {
+    background-color: white; 
+    color: var(--color-principal); 
+    border: 2px solid var(--color-principal);
+}
+
+.botonSubir:hover {
+    background-color: var(--color-principal);;
+    color: white;
+}
+
+/* ********************* SECCION CONTACTO ****************** */
 
 .contacto{
     width: 60%;
-    margin: 0px auto 20%;
+    margin: 0px auto 10%;
 }
 .contenedorContacto{
     display: grid;
     grid-template-columns:1fr 1fr;
     align-items: center;
-    row-gap: 7vh;
+    row-gap: 4rem;
     text-align: center;
     color: var(--color-principal);
 }
 .contenedorContacto img{
-    width: 5vh;
+    width: 3rem;
 }
 .contenedorContacto p{
-    font-size: 1.2vw;
+    font-size: 1.3rem;
     font-weight: 300;
     color: var(--color-gray);
     text-align: center;
@@ -261,15 +290,18 @@ dd{
 
 .map{
     width: 70%;
-    margin: 7vh auto 0vh auto;
+    margin: 4rem auto 0rem auto;
     text-align: center;
 }
 .map iframe{
     width: 100%;
-    margin-bottom: 3vh;
+    margin-bottom: 2rem;
     box-shadow: 5px 5px 20px var(--color-gray);
 }
+@media screen and (max-width: 640px) {
 
+
+}
 
 
 
