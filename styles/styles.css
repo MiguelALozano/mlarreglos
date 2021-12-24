@@ -42,7 +42,7 @@ h3{
     line-height:5vh;
     color: var(--color-white);
 }
-
+/* ****************************************** HEADER ****************************************** */
 header {
     width: 100%;
     display: grid;
@@ -60,7 +60,24 @@ header {
     overflow: hidden;
 }
 
-/* ********************* NAV ****************** */
+@media screen and (max-width: 640px) {
+    .cabecera{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items:center;
+        align-items: center;
+        background-color: var(--color-white);
+    }
+    .logo{
+        width: 20%;
+    }
+    .adorno{
+        display: none;
+    }
+}
+    
+/* ****************************************** NAV ****************************************** */
 nav{
     width: 100%;
     background-color: var(--color-black);
@@ -83,18 +100,47 @@ nav ul li a {
     text-align: center;
     color: var(--color-white);
 }
-
 a:hover {
     text-decoration: none;
     color: var(--color-gray);
 }
+@media screen and (max-width: 640px) {
+    .menu{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0.5%;
+        line-height: 2rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 3%;
+    }
+    
+    nav ul li a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        color: var(--color-white);
+    }
+
+}
+
+
+
+
 
 /* ********************* SECTION 1 ****************** */
 
 section{
     width: 100%;
 }
-        /* ----------- titulares ----------- */
+        /* ----------- titular ----------- */
 .titular{
     width: 100%;
     background-color: var(--color-principal);
@@ -107,7 +153,8 @@ section{
 
         /* ----------- texto y foto ----------- */
 .textoyfoto{
-    width: 100%;
+    width: 80%;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
@@ -360,47 +407,7 @@ dd{
         font-size: 3.5vw;
         line-height:3vh;
     }
-    .cabecera{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items:center;
-        align-items: center;
-        background-color: var(--color-white);
-    }
-    .logo{
-        width: 20%;
-    }
-    .adorno{
-        display: none;
-    }
 
-    /* ********************* NAV ****************** */
-    .menu{
-        width: 60%;
-        margin: 0px auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        list-style: none;
-        padding: 0.5%;
-        
-    }
-    .menu{
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 3%;
-    }
-    nav ul li a {
-        font-size: 3vw;
-        font-weight: 500;
-        text-decoration: none;
-        text-align: center;
-        color: var(--color-white);
-    }
-    
     /* ********************* SECTION 1 ****************** */
     .titular-texto{
         width: 100%;
