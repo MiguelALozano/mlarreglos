@@ -401,19 +401,22 @@ dd{
 
 }
 @media screen and (min-width: 1200px) {
-    .wrapper, .listas, .cb-wrapper{
+    .wrapper, .listas, .cb-wrapper, .botonSubir{
         max-width: 1200px;
     }
 }
 
-
+/* ********************* SECTION ALQUILER ****************** */
 .cb-wrapper {
     width: 60%;
     margin: 0px auto 3rem auto;
     display: grid;
-    grid-template-areas: "uno uno dos"
-                         "tres cuatro dos"
-                         "tres cinco seis";
+    grid-template-areas:    "uno dos dos dos tres tres"
+                            "uno dos dos dos tres tres"
+                            "uno dos dos dos tres tres"
+                            "cuatro cuatro cinco cinco tres tres"
+                            "cuatro cuatro seis siete ocho nueve"
+                            "cuatro cuatro seis siete ocho nueve";
     grid-gap: 10px;
     overflow: hidden;
 }
@@ -452,8 +455,6 @@ dd{
 }
 .cb-e {
     grid-area: cinco;
-   /*  grid-column: 2 ;
-    grid-row: 2 ; */
     object-fit: cover;
 }
 .cb-e img{
@@ -462,11 +463,33 @@ dd{
 }
 .cb-f {
     grid-area: seis;
-   /*  grid-column: 2 ;
-    grid-row: 2 ; */
     object-fit: cover;
 }
 .cb-f img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cb-g {
+    grid-area: siete;
+    object-fit: cover;
+}
+.cb-g img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cb-h {
+    grid-area: ocho;
+    object-fit: cover;
+}
+.cb-h img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cb-i {
+    grid-area: nueve;
+    object-fit: cover;
+}
+.cb-i img{
     width: 100%;
     border-radius: 5px;
 }
@@ -483,55 +506,24 @@ dd{
         flex-wrap: wrap;
         align-items: center;
     }
+    .cb-wrapper {
+        width: 100%;
+        margin: 0px auto 3rem auto;
+        display: grid;
+        grid-template-areas:    "uno uno"
+                                "dos dos"
+                                "tres tres"
+                                "cuatro cuatro"
+                                "cinco cinco"
+                                "seis siete"
+                                "ocho nueve";
+        grid-gap: 10px;
+        overflow: hidden;
+    }
     .box {
         margin: 2px auto;
     }
-    .cb-a {
-        width: 100%;
-    }
-    .cb-a img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    .cb-b {
-        width: 100%;
-    }
-    .cb-b img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    .cb-c {
-        width: 100%;
-        object-fit: cover;
-    }
-    .cb-c img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    .cb-d {
-        width: 100%;
-        object-fit: cover;
-    }
-    .cb-d img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    .cb-e {
-        width: 100%;
-        object-fit: cover;
-    }
-    .cb-e img{
-        width: 100%;
-        border-radius: 5px;
-    }
-    .cb-f {
-        width: 100%;
-        object-fit: cover;
-    }
-    .cb-f img{
-        width: 100%;
-        border-radius: 5px;
-    }
+    
     .listas{
         width: 90%;
         display: block;
